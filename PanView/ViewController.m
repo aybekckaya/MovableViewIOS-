@@ -17,7 +17,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.viewPan.delegate =self;
+   // self.viewPan.verticalPanEnabled = NO;
+    
 }
+
+-(BOOL)panView:(PanView *)view shouldMoveToLocation:(CGPoint)pointWillMove
+{
+    if(pointWillMove.x <150)
+    {
+        return NO;
+    }
+    
+    return YES;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

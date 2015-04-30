@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PanView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<PanViewDelegate>
+{
+    
+}
+
+
+@property (weak, nonatomic) IBOutlet PanView *viewPan;
+
 
 
 @end
